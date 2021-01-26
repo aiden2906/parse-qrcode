@@ -14,6 +14,7 @@ async function main() {
   for (let row of content) {
     try {
       await qrcode(`images/${row['SO SERI']}.png`, row['QRCODE']);
+      // qr_code.toFile(`${row['SO SERI']}.png`, row['QRCODE']);
     } catch(err) {
       console.log(err);
     }
